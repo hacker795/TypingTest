@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>typing test</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+</head>
+
+<body  data-theme="light">
+      
+<section class="main-body">
+     
+   <button id="dark-mode-toggle" class="btn">
+    <i class="fas fa-moon dark-mode-icon"></i>
+   </button>
+
+    <h2>typing Speed test</h2>
+    <p id="showSentence"></p>
+
+    <div class="typing_section">
+        <label for="textarea"></label>
+        <textarea name="textarea" id="textarea" cols="30" rows="10" disabled></textarea>
+        <br>
+        <button id="btn">Start</button>
+    </div>
+
+    <p id="score"></p>
+
+</section>
+
+<script>
+    const darkModeToggle = document.querySelector('#dark-mode-toggle');
+    const body = document.querySelector('body');
+
+    darkModeToggle.addEventListener('click', () => {
+        if (body.getAttribute('data-theme') === 'light') {
+            body.setAttribute('data-theme', 'dark');
+            darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            body.setAttribute('data-theme', 'light');
+            darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+    });
+</script>
+
+<script src="index.js"></script>
+
+</body>
+</html>
